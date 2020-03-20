@@ -1,0 +1,141 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:statusBarColor">@color/colorWhite</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" >
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:statusBarColor">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:statusBarColor">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="AppTheme.PopupMenu" parent="Widget.AppCompat.PopupMenu">
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textColorSecondary">@color/colorPrimary</item>
+        <item name="android:background">@color/colorBackgroundPopupMenu</item>
+    </style>
+
+    <!-- Dialog Style -->
+
+    <style name="titleDialogBlueText" parent="Base.TextAppearance.AppCompat">
+        <item name="android:textColor">@color/colorTextTitlePrimary</item>
+        <item name="android:textSize">@dimen/text_subtittle</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+
+    <style name="bodyDialogDarkText" parent="Base.TextAppearance.AppCompat">
+        <item name="android:textColor">@color/colorTextBlack</item>
+        <item name="android:textSize">@dimen/text_header</item>
+    </style>
+
+
+    <!-- Text Views-->
+    <style name="titleWhiteText" parent="Base.TextAppearance.AppCompat">
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textSize">@dimen/text_header</item>
+    </style>
+
+    <style name="bodyWhiteText" parent="Base.TextAppearance.AppCompat">
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textSize">@dimen/text_body</item>
+    </style>
+
+    <style name="bodySmallWhiteText" parent="Base.TextAppearance.AppCompat">
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textSize">@dimen/text_body_small</item>
+    </style>
+
+    <style name="subTitleBlueText" parent="Base.TextAppearance.AppCompat">
+        <item name="android:textColor">@color/colorTextTitlePrimary</item>
+        <item name="android:textSize">@dimen/text_subtittle</item>
+    </style>
+
+    <style name="titleBlueText" parent="Base.TextAppearance.AppCompat">
+        <item name="android:textColor">@color/colorTextTitlePrimary</item>
+        <item name="android:textSize">@dimen/text_tittle</item>
+    </style>
+
+    <style name="bodyBlueText" parent="Base.TextAppearance.AppCompat">
+        <item name="android:textColor">@color/colorTextTitlePrimary</item>
+        <item name="android:textSize">@dimen/text_body</item>
+    </style>
+
+    <style name="tittleDateText" parent="Base.TextAppearance.AppCompat">
+        <item name="android:textColor">@color/colorTextBlack</item>
+        <item name="android:textSize">@dimen/text_tittle</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="bodyGrayBoldText" parent="Base.TextAppearance.AppCompat">
+        <item name="android:textColor">@color/colorTextBody</item>
+        <item name="android:textSize">@dimen/text_body</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="bodyGrayText" parent="Base.TextAppearance.AppCompat">
+        <item name="android:textColor">@color/colorTextBody</item>
+        <item name="android:textSize">@dimen/text_body</item>
+    </style>
+
+    <style name="bodySmallGrayText" parent="Base.TextAppearance.AppCompat">
+        <item name="android:textColor">@color/colorTextBody</item>
+        <item name="android:textSize">@dimen/text_body_small</item>
+    </style>
+
+    <style name="bodyDarkText" parent="Base.TextAppearance.AppCompat">
+        <item name="android:textColor">@color/colorTextBlack</item>
+        <item name="android:textSize">@dimen/text_body</item>
+    </style>
+
+    <style name="headerDarkText" parent="Base.TextAppearance.AppCompat">
+        <item name="android:textColor">@color/colorTextBlack</item>
+        <item name="android:textSize">@dimen/text_header</item>
+    </style>
+
+    <style name="TextInputStyleGray" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/colorHintGray</item>
+        <item name="android:textSize">@dimen/text_body_small</item>
+    </style>
+
+    <style name="TextInputStyleError" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/colorError</item>
+        <item name="android:textColorHint">@color/colorError</item>
+        <item name="android:textSize">@dimen/text_body_small</item>
+    </style>
+
+    <!-- Buttons-->
+
+    <style name="ButtonBorderlessPositive" parent="@android:style/Widget.Material.Light.Button.Borderless.Colored">
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="colorControlHighlight">@color/colorAccent</item>
+        <item name="android:height">@dimen/button_height</item>
+    </style>
+
+    <style name="ButtonBorderlessNegative" parent="@android:style/Widget.Material.Light.Button.Borderless.Colored">
+        <item name="android:textColor">@color/colorCancel</item>
+        <item name="colorControlHighlight">@color/colorCancel</item>
+        <item name="android:height">@dimen/button_height</item>
+    </style>
+
+</resources>

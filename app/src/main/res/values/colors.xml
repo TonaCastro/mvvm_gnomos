@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#23ADE3</color>
+    <color name="colorPrimaryDark">#0091C2</color>
+    <color name="colorAccent">#0090c0</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorPrimaryLigth">#A3D7FF</color>
+
+    <color name="colorButtonPrimaryDarkActive">#42a5f5</color>
+    <color name="colorButtonPrimaryDarkNotActive">#8F42a5f5</color>
+    <color name="colorButtonPrimaryDarkDisabled">#5E42a5f5</color>
+
+    <color name="colorTextTitlePrimary">#26ade3</color>
+    <color name="colorTextTitleDisabled">#5E26ade3</color>
+
+    <color name="colorTextBody">#61000000</color>
+    <color name="colorTextBlack">#031006</color>
+
+    <color name="colorCancel">#F44336</color>
+    <color name="colorError">#c73f3e</color>
+
+    <color name="colorHintGray">#61000000</color>
+
+    <color name="colorBackgroundPopupMenu">#424242</color>
+</resources>

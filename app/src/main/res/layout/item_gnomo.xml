@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data >
+
+        <variable
+            name="gnomo"
+            type="com.tonacastro.gnomos.domain.gnomos.model.GnomoModel" />
+
+        <variable
+            name="mainViewModel"
+            type="com.tonacastro.gnomos.viewmodel.main.MainViewModel" />
+
+        <variable
+            name="gnomosAdapter"
+            type="com.tonacastro.gnomos.view.adapters.GnomoListAdapter" />
+
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_horizontal_margin">
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/medium_vertical_spacing"
+                android:layout_marginStart="@dimen/activity_vertical_margin"
+                android:layout_marginEnd="@dimen/activity_vertical_margin"
+                android:layout_marginBottom="@dimen/medium_vertical_spacing"
+                >
+                <ImageView
+                    android:id="@+id/item_gnomo_imgmain"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:scaleType="fitCenter"
+                    android:contentDescription="@string/app_name"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/headerDarkText"
+                    android:text="@{gnomo.name}"
+                    tools:text="Gnome Name"/>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/bodyGrayText"
+                        android:text="@{gnomo.age}"
+                        tools:text="368"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/medium_vertical_spacing"
+                        style="@style/bodyGrayText"
+                        android:text="@string/item_text_years_old"
+                        tools:text="@string/item_text_years_old"/>
+
+                </LinearLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <Button
+                        android:id="@+id/item_gnomo_tbndetail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:text="@string/item_gnomo_more_detail"
+                        tools:text="@string/item_gnomo_more_detail"
+                        style="@style/ButtonBorderlessPositive"/>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>
