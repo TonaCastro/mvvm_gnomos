@@ -2,6 +2,7 @@ package com.tonacastro.gnomos.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.fragment.app.Fragment
 import com.tonacastro.gnomos.R
 import com.tonacastro.gnomos.domain.gnomos.model.GnomoModel
@@ -18,6 +19,12 @@ class MainActivity : AppCompatActivity(), MainFragment.GnomoSelectedListener{
             fragment.setGnomoSelectedListener(this)
             changeFragment(fragment,MainFragment::javaClass.name)
         }
+
+        supportActionBar?.let {
+            it.setDisplayHomeAsUpEnabled(true)
+            it.setDisplayShowHomeEnabled(true)
+        }
+
     }
 
     private fun changeFragment(fragment: Fragment, tag: String) {

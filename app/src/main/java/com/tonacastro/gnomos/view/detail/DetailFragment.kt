@@ -15,7 +15,7 @@ import com.tonacastro.gnomos.R
 import com.tonacastro.gnomos.data.database.GnomosDatabase
 import com.tonacastro.gnomos.databinding.DetailFragmentBinding
 import com.tonacastro.gnomos.domain.gnomos.model.GnomoModel
-import com.tonacastro.gnomos.view.adapters.GnomoListAdapter
+import com.tonacastro.gnomos.view.adapters.GenericListAdapter
 import com.tonacastro.gnomos.viewmodel.ViewModelCreateFactoryParams
 import com.tonacastro.gnomos.viewmodel.detail.DetailViewModel
 import kotlinx.android.synthetic.main.detail_fragment.*
@@ -24,7 +24,9 @@ class DetailFragment : Fragment() {
 
     private lateinit var gnomoDetail : GnomoModel
 
-    private lateinit var adapter: GnomoListAdapter
+    private lateinit var adapterFriends: GenericListAdapter
+
+    private lateinit var adapterProfessions: GenericListAdapter
 
     private lateinit var  binding: DetailFragmentBinding
 
@@ -64,10 +66,18 @@ class DetailFragment : Fragment() {
         viewModel = ViewModelProviders.of(this, factory).get(DetailViewModel::class.java)
         binding.detailViewModel = viewModel
         viewModel.getGnomoLiveData().observe(viewLifecycleOwner,observerGnomo)
+
+        adapterFriends = GenericListAdapter()
+        adapterProfessions = GenericListAdapter()
+
+        detail_fragment_rvfriends.adapter = adapterFriends
+        detail_fragment_rvprofessions.adapter = adapterProfessions
     }
 
     var observerGnomo = Observer<GnomoModel> {
         it?.let {
+            adapterFriends.notifyChanges(it.friends)
+            adapterProfessions.notifyChanges(it.professions)
             context?.let {contextIt ->
                 Glide.with(contextIt).load(it.imageUrl).centerCrop()
                     .error(R.drawable.ic_launcher_background).into(detail_fragment_imgmain)

@@ -41,6 +41,8 @@ class GenericListAdapter :  RecyclerView.Adapter<GenericListAdapter.GnomoViewHol
     override fun onBindViewHolder(holder: GnomoViewHolder, position: Int) {
         val itemSelected = itemList.get(position)
 
+        holder.cellGnomoBinding.itemTittleTvtittle.text = itemSelected
+
 
     }
 
