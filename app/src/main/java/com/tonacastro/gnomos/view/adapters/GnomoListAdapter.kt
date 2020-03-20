@@ -6,7 +6,6 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.bumptech.glide.load.resource.bitmap.CircleCrop
 import com.tonacastro.gnomos.R
 import com.tonacastro.gnomos.databinding.ItemGnomoBinding
 import com.tonacastro.gnomos.domain.gnomos.model.GnomoModel

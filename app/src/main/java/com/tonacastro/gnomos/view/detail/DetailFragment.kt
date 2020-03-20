@@ -26,6 +26,8 @@ class DetailFragment : Fragment() {
 
     private lateinit var adapter: GnomoListAdapter
 
+    private lateinit var  binding: DetailFragmentBinding
+
     companion object {
 
         @JvmStatic
@@ -43,7 +45,7 @@ class DetailFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        val  binding: DetailFragmentBinding = DataBindingUtil.inflate(inflater,R.layout.detail_fragment,
+        binding = DataBindingUtil.inflate(inflater,R.layout.detail_fragment,
             container, false)
         binding.setLifecycleOwner(activity)
         binding.detailFragmentRvprofessions.setLayoutManager(
@@ -60,6 +62,7 @@ class DetailFragment : Fragment() {
         val gnomosDatabase = GnomosDatabase.getDatabase(activity!!.application)
         val factory = ViewModelCreateFactoryParams(gnomosDatabase, this.gnomoDetail)
         viewModel = ViewModelProviders.of(this, factory).get(DetailViewModel::class.java)
+        binding.detailViewModel = viewModel
         viewModel.getGnomoLiveData().observe(viewLifecycleOwner,observerGnomo)
     }
 

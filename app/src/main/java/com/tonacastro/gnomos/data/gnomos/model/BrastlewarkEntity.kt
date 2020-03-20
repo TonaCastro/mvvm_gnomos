@@ -34,5 +34,5 @@ fun BrastlewarkEntity.toDomainModel() = GnomoModel(id,
     weight.toString(),
     height.toString(),
     hairColor,
-    arrayListOf(),
-    arrayListOf())
+    arrayListOf("Profession 1","Profession 2","Profession 3","Profession 4","Profession 5"),
+    arrayListOf("Friend 1","Friend 2","Friend 3","Friend 4","Friend 5"))

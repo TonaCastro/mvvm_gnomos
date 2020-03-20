@@ -15,7 +15,6 @@
             name="gnomosAdapter"
             type="com.tonacastro.gnomos.view.adapters.GnomoListAdapter" />
 
-
     </data>
 
     <androidx.cardview.widget.CardView

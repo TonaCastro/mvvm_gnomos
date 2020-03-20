@@ -3,12 +3,11 @@ package com.tonacastro.gnomos.viewmodel.detail
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
 import com.tonacastro.gnomos.data.database.GnomosDatabase
 import com.tonacastro.gnomos.data.gnomos.repository.GnomosRepository
+import com.tonacastro.gnomos.domain.gnomos.manager.GnomoClasificationManager
 import com.tonacastro.gnomos.domain.gnomos.model.GnomoModel
 import com.tonacastro.gnomos.domain.gnomos.usecase.GetGnomosUseCase
-import kotlinx.coroutines.launch
 
 class DetailViewModel(val database: GnomosDatabase,val gnomo: GnomoModel) : ViewModel() {
 
@@ -16,6 +15,8 @@ class DetailViewModel(val database: GnomosDatabase,val gnomo: GnomoModel) : View
     val useCase = GetGnomosUseCase(repository)
 
     private var gnomosLiveData: MutableLiveData<GnomoModel> = MutableLiveData()
+
+    var gender = ""
 
     init {
         loadGnomo()
@@ -25,7 +26,9 @@ class DetailViewModel(val database: GnomosDatabase,val gnomo: GnomoModel) : View
         return gnomosLiveData
     }
 
+
     fun loadGnomo() {
+        gender = GnomoClasificationManager().guessGender(gnomo.height.toDouble())
         gnomosLiveData.value = gnomo
     }
 }
