@@ -3,4 +3,8 @@
     <string name="item_text_years_old">Years old</string>
     <string name="item_gnomo_more_detail">Ver detalle</string>
     <string name="dateil_text_hair_color">Hair color</string>
+    <string name="detail_fragment_text_weigth">Weigth</string>
+    <string name="detail_fragment_text_height">Height</string>
+    <string name="detail_fragment_text_professions">Professions</string>
+    <string name="detail_fragment_text_friends">Friends</string>
 </resources>

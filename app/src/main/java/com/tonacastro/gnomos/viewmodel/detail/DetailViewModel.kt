@@ -1,4 +1,4 @@
-package com.tonacastro.gnomos.viewmodel.main
+package com.tonacastro.gnomos.viewmodel.detail
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -10,24 +10,22 @@ import com.tonacastro.gnomos.domain.gnomos.model.GnomoModel
 import com.tonacastro.gnomos.domain.gnomos.usecase.GetGnomosUseCase
 import kotlinx.coroutines.launch
 
-class MainViewModel (val database: GnomosDatabase): ViewModel() {
+class DetailViewModel(val database: GnomosDatabase,val gnomo: GnomoModel) : ViewModel() {
 
     val repository = GnomosRepository(database)
     val useCase = GetGnomosUseCase(repository)
 
-    private var gnomosLiveData: MutableLiveData<List<GnomoModel>?> = MutableLiveData()
+    private var gnomosLiveData: MutableLiveData<GnomoModel> = MutableLiveData()
 
     init {
-        loadGnomos()
+        loadGnomo()
     }
 
-    fun getGnomosLiveData(): LiveData<List<GnomoModel>?> {
+    fun getGnomoLiveData(): LiveData<GnomoModel> {
         return gnomosLiveData
     }
 
-    fun loadGnomos() {
-        viewModelScope.launch {
-            gnomosLiveData.value = useCase.getGnomosList().value
-        }
+    fun loadGnomo() {
+        gnomosLiveData.value = gnomo
     }
 }

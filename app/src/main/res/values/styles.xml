@@ -81,10 +81,9 @@
         <item name="android:textSize">@dimen/text_body</item>
     </style>
 
-    <style name="tittleDateText" parent="Base.TextAppearance.AppCompat">
+    <style name="tittlListText" parent="Base.TextAppearance.AppCompat">
         <item name="android:textColor">@color/colorTextBlack</item>
         <item name="android:textSize">@dimen/text_tittle</item>
-        <item name="android:textStyle">bold</item>
     </style>
 
     <style name="bodyGrayBoldText" parent="Base.TextAppearance.AppCompat">

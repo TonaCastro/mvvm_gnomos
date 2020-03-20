@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity(), MainFragment.GnomoSelectedListener{
     }
 
     override fun gnomoSelected(service: GnomoModel) {
-        val fragment = DetailFragment.newInstance()
+        val fragment = DetailFragment.newInstance(service)
         changeFragment(fragment,DetailFragment::javaClass.name)
     }
 
